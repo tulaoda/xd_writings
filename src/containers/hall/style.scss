@@ -1,0 +1,39 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+@import '../../assets/iconfont/iconfont.css';
+
+.am-icon-left {
+    color: black;
+    width: px2rem(35px);
+    height: px2rem(35px);
+
+}
+
+
+.icon-wode-xian {
+    font-size: px2rem(35px);
+    color: black;
+}
+
+.am-navbar-title {
+    font-size: px2rem(16px);
+
+}
+
+
+
+.am-search-synthetic-ph,
+.am-search-input input[type="search"],
+.am-search-input {
+    height: px2rem(40px) !important;
+    line-height: px2rem(40px) !important;
+    border-radius: px2rem(10px);
+}
+
+.am-search {
+    margin-top: px2rem(15px);
+    background-color: #f5f5f5;
+}

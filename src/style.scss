@@ -1,0 +1,14 @@
+@function px2rem($px) {
+  $rem: 37.5px;
+  @return ($px / $rem)+rem;
+}
+
+html {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Tahoma, sans-serif;
+
+}
+
+.am-navbar {
+  height: px2rem(40px);
+}
