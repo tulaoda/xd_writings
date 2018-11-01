@@ -1,0 +1,46 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+@import '../../assets/iconfont/iconfont.css';
+
+.narbar {
+    height: px2rem(45px);
+    line-height: px2rem(45px);
+    position: sticky;
+    color: #000000;
+    text-align: center;
+    box-shadow: 0 2px 20px 4px #e9e9e9;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    font-size: px2rem(15px);
+    font-family: "PingFangSC-Regular";
+
+    .left-icon {
+        width: px2rem(18px);
+        height: px2rem(10px);
+        margin-left: px2rem(14px);
+        float: left;
+
+        .icon-daohangfanhui {
+            font-size: px2rem(18px);
+        }
+    }
+
+    .right-icon {
+        width: px2rem(19px);
+        height: px2rem(18px);
+        margin-right: px2rem(14px);
+        float: right;
+
+        img {
+            width: px2rem(19px);
+            // height: px2rem(18px);
+        }
+    }
+
+
+
+}

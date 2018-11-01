@@ -1,0 +1,40 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+.searchInput {
+    width: px2rem(325px);
+    height: px2rem(40px);
+    border-radius: px2rem(20px);
+    margin-left: px2rem(17px);
+    margin-right: px2rem(34px);
+    margin-top: px2rem(14px);
+    box-shadow: 0 0 25px 0 hsla(0, 0%, 71%, .24);
+    padding: px2rem(12px) px2rem(12px) px2rem(14px) px2rem(16px);
+    background: #ffffff;
+
+    .search-icon {
+        width: px2rem(15px);
+        float: left;
+
+        img {
+            width: px2rem(15px);
+            height: px2rem(15px);
+        }
+    }
+
+    .input-content {
+        float: left;
+        // line-height: px2rem(12px);
+        border: none;
+        margin-left: px2rem(12px);
+        font-size: px2rem(12px);
+        height: px2rem(38px);
+        line-height: px2rem(38px);
+        position: relative;
+        top: px2rem(-12px);
+    }
+
+
+}

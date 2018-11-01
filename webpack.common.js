@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin') // 通过 npm 安装
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const tsImportPluginFactory = require('ts-import-plugin') // 按需导入
+var OpenBrowserPlugin = require('open-browser-webpack-plugin') // 自动打开浏览器插件
 const moment = require('moment')
 
 // 判断是否是dev
@@ -42,7 +43,7 @@ console.log(`
 `)
 
 const config = {
-  // mode: 'development',
+  mode: 'development',
   // 页面入口文件配置
   entry: './src/index.tsx',
   output: {
@@ -71,7 +72,10 @@ const config = {
       exclude: /node_modules/
     }, {
       test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-      loader: 'url-loader?limit=50000&name=[path][name].[ext]'
+      use: [
+        'url-loader?limit=100000&name=[path][name].[ext]',
+        'image-webpack-loader'
+      ]
     },
     {
       test: /\.css$/,
@@ -92,12 +96,13 @@ const config = {
         loader: 'sass-loader'
       }
       ]
-    }, {
-      test: /\.(png|jpg|gif|svg)$/i,
-      use: [
-        'file-loader'
-      ]
     }
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/i,
+      //   use: [
+      //     'file-loader'
+      //   ]
+      // }
     ]
   },
   plugins: [
@@ -107,8 +112,8 @@ const config = {
     //   }
     // }),
     new MiniCssExtractPlugin({
-      filename: './css/[name].[chunkhash:8].css',
-      chunkFilename: '[id].css'
+      filename: `css/style.css`,
+      chunkFilename: 'css/vendors.css'
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -129,7 +134,10 @@ const config = {
     })
     () </script>`
     }),
-    new CleanWebpackPlugin(['dist']) // 清理打包后的文件
+    new CleanWebpackPlugin(['dist']), // 清理打包后的文件
+    new OpenBrowserPlugin({
+      url: 'http://localhost:9000'
+    })
 
   ]
   // 加载器配置

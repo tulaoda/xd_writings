@@ -17,7 +17,9 @@ const config = merge(common, {
       error: true // 在页面显示错误
     },
     port: 9000,
-    hot: false // 只对组件进行修改，不刷新全部页面
+    hot: true, // 只对组件进行修改，不刷新全部页面
+    historyApiFallback: true
+
   },
   plugins: [
     new webpack.NamedModulesPlugin(),

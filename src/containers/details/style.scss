@@ -1,0 +1,201 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+body {
+    background-color: #ffffff;
+
+}
+
+.content-detail {
+    margin: px2rem(32px) px2rem(25px);
+
+    .content-type {
+        height: px2rem(16px);
+        line-height: px2rem(16px);
+        border-left: px2rem(3px) solid #5CDAA8;
+        padding-left: px2rem(8px);
+        font-weight: 600;
+        color: #333;
+    }
+
+    .content-body {
+        margin-top: px2rem(26px);
+        padding: 0 px2rem(11px);
+        font-size: px2rem(14px);
+        color: #666666;
+        line-height: px2rem(22px);
+    }
+
+    .endTime {
+        font-size: px2rem(16px);
+    }
+
+
+}
+
+.stripes {
+    height: px2rem(5px);
+    background-color: #EEEEEE;
+    width: 100%;
+}
+
+.content-footer {
+    margin: 0 px2rem(25px);
+
+    .footer-title {
+        margin-top: px2rem(24px);
+        font-size: px2rem(16px);
+        color: #333333;
+    }
+
+    .footer-items {
+        margin-top: px2rem(23px);
+        display: flex;
+        text-align: center;
+
+        .footer-item {
+            flex: 1;
+            display: block;
+
+            &>div {
+                display: flex;
+            }
+
+            .item-img {
+                img {
+                    width: px2rem(33px);
+                    height: px2rem(31px);
+                    display: block;
+                    margin: auto;
+                    margin-bottom: px2rem(9px);
+                    margin-top: px2rem(6px);
+                }
+
+                span {
+                    font-size: px2rem(12px);
+                    color: #666666;
+                }
+            }
+
+
+
+            .reward-num {
+                margin-left: px2rem(20px);
+
+                li {
+                    line-height: px2rem(23.3px);
+                    font-size: px2rem(12px);
+                    color: #666666;
+                    font-weight: 400;
+                    position: relative;
+                    list-style: none;
+                    padding-left: px2rem(15px);
+
+                    &:before {
+                        content: "";
+                        width: px2rem(5px);
+                        height: px2rem(5px);
+                        border-radius: 100%;
+                        background: #e5e5e5;
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                        box-sizing: border-box;
+                    }
+
+                    span:last-child {
+                        display: inline-block;
+                        background: #5cdaa8;
+                        border-radius: 8px;
+                        padding: 0 5px;
+                        height: 15px;
+                        line-height: 15px;
+                        font-weight: 400;
+                        color: #fff;
+                        margin-left: 12px;
+                        text-align: center;
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+
+
+}
+
+.content {
+    margin-bottom: px2rem(148px);
+}
+
+.footer-btn {
+    position: fixed;
+    width: 100%;
+    height: px2rem(45px);
+    line-height: px2rem(45px);
+    font-size: px2rem(17px);
+    text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    bottom: px2rem(17px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    .btn-publish {
+        width: px2rem(156px);
+        height: px2rem(45px);
+        background-color: #5cdaa8;
+        border-radius: px2rem(23px);
+    }
+}
+
+
+/*   投稿组件样式*/
+
+.edit {
+    margin: 0 px2rem(15px);
+    box-sizing: border-box;
+
+    .title-dec {
+        margin-top: px2rem(25px);
+        font-size: px2rem(17px);
+        color: #333;
+        font-family: 'PingFangSC-Regular';
+        line-height: px2rem(36px);
+    }
+
+    .edit-input {
+        min-height: px2rem(60px);
+        box-sizing: border-box;
+        padding: px2rem(17px) px2rem(10px);
+        background-color: #F4F5F6;
+        border-radius: px2rem(5px);
+
+        .edit-input-child {
+            height: px2rem(26px);
+            width: 100%;
+            border: none;
+            background-color: #F4F5F6;
+            color: #999999;
+            padding-top: px2rem(12px);
+        }
+
+        .edit-input-child::-webkit-input-placeholder {
+            font-size: px2rem(12px);
+        }
+
+        .jiejian {
+            height: px2rem(124px);
+        }
+    }
+
+
+}

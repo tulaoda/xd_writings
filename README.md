@@ -9,9 +9,10 @@
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. npm i 
+2. npm run start   启动 webpack-dev-server
+3. npm run dev 开发环境打包
+4. npm run build  生产环境打包
 
 #### 使用说明
 

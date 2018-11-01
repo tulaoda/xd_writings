@@ -1,0 +1,55 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem)+rem;
+}
+
+.article-item {
+    width: px2rem(345px);
+    margin: px2rem(15px);
+    background-color: #ffffff;
+    border-radius: px2rem(5px);
+    display: block;
+    box-shadow: 0 0 25px 0 hsla(0, 0%, 71%, .24);
+    padding: px2rem(25px) px2rem(25px) px2rem(16px) px2rem(25px);
+
+
+    .article-title {
+        font-size: px2rem(14px);
+        padding-bottom: px2rem(16px);
+        color: #333;
+        font-weight: 600;
+        line-height: px2rem(22px);
+    }
+
+    .article-msg {
+        margin-bottom: px2rem(16px);
+    }
+
+    .article-type {
+        width: px2rem(39px);
+        // height: px2rem(20px);
+        line-height: px2rem(20px);
+        border: 1px solid #5CDAA8;
+        font-size: px2rem(12px);
+        color: #5CDAA8;
+        border-radius: px2rem(10px);
+        float: left;
+        margin-right: px2rem(12px);
+        padding: 0 px2rem(6px);
+
+    }
+
+    .article-date {
+        width: px2rem(168px);
+        height: px2rem(12px);
+        float: left;
+        font-size: px2rem(12px);
+        line-height: px2rem(20px);
+
+    }
+
+    img {
+        width: px2rem(50px);
+        height: px2rem(50px);
+    }
+}

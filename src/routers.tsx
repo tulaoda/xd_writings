@@ -10,8 +10,16 @@ export default class Routes extends React.Component<any, any> {
       component: containers.Hall
     },
     {
-      path: "/details",
+      path: "/details/:id",
       component: containers.Details
+    },
+    {
+      path: "/submisson/:id",
+      component: containers.Submission
+    },
+    {
+      path: "*",
+      component: containers.Hall
     }
   ];
   render() {
