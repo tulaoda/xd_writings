@@ -10,7 +10,7 @@ export class ListView extends React.Component<any, any> {
   render() {
     return (
       <Link to={"/details/" + this.props.item.id} className="article-item">
-        <div className="article-title">{this.props.item.subject}</div>
+        <div className="article-title2">{this.props.item.subject}</div>
         <div className="article-msg">
           <div className="article-type">
             {this.props.item.articleType == 1 ? "升旗" : "晨跑"}

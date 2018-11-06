@@ -17,12 +17,12 @@ export class HttpBasics {
         });
     }
     axios.interceptors.request.use(
-      function(config) {
+      function (config) {
         let token = sessionStorage.getItem("access_token");
         config.headers.common["Authorization"] = "Bearer " + token;
         return config;
       },
-      function(error) {
+      function (error) {
         // Do something with request error
         return Promise.reject(error);
       }
@@ -49,7 +49,7 @@ export class HttpBasics {
       axios
         .post(url, JSON.stringify(data), {
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/json"
           }
         })
         .then(res => {

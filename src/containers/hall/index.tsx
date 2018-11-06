@@ -12,42 +12,18 @@ import { toJS } from "mobx";
 export class Hall extends React.Component<any, any> {
   constructor(props) {
     super(props);
-
-    this.state = {
-      list: []
-    };
   }
   componentDidMount() {
-    let that = this;
-
-    // Store.Hall.getPageData();
-    Http.get(
-      "/api/v1/Article/GetArticleCollect?page=1&pageSize=10&search=",
-      ""
-    ).then(function(res:any) {
-      // console.log(res.data.list);
-      that.setState({
-        list: res.data.list
-      });
-      // console.log(map);
-    });
+    Store.Hall.getPageData()
   }
   render() {
-    // const { Hall } = Store;
-    // const { pageData } = Hall;
-    // const { data } = pageData;
-    // console.log(pageData);
-    // if (pageData.data) {
-    //   const { list } = data;
-    //   console.log(data);
-    //   console.log(list);
-    // const { Hall } = this.props;
-    // }
+    const { Hall } = this.props;
+    const { pageData } = Hall;
     return (
       <div className="hall">
-        <NavBar title="投稿" img={myImg} />
+        <NavBar title="投稿" img={myImg} ifMyCom="1" toprops={this.props} />
         <Search />
-        {this.state.list.map((item, key) => {
+        {pageData.map((item, key) => {
           return <ListView key={key} item={item} />;
         })}
       </div>

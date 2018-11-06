@@ -157,90 +157,56 @@ body {
     }
 }
 
+.footer {
+    .footer-judge {
+        li {
+            padding-left: px2rem(38px);
+            position: relative;
+            min-height: px2rem(100px);
 
-/*   投稿组件样式*/
 
-.edit {
-    margin: 0 px2rem(15px);
-    box-sizing: border-box;
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                left: 8px;
+                top: 17px;
+                bottom: 0;
+                width: 1px;
+                background: #e5e5e5;
+                -webkit-transform: scaleY(.7);
+                transform: scaleY(.7);
+            }
 
-    .title-dec {
-        margin-top: px2rem(25px);
-        font-size: px2rem(17px);
-        color: #333;
-        font-family: 'PingFangSC-Regular';
-        line-height: px2rem(36px);
-    }
+            &:last-child:before {
+                display: none;
+            }
 
-    .edit-input {
-        min-height: px2rem(60px);
-        box-sizing: border-box;
-        padding: px2rem(17px) px2rem(10px);
-        background-color: #F4F5F6;
-        border-radius: px2rem(5px);
+            span {
+                position: absolute;
+                width: px2rem(17px);
+                height: px2rem(17px);
+                border: 2px solid #eee;
+                border-radius: 100%;
+                left: 0;
 
-        .edit-input-child {
-            height: px2rem(26px);
-            width: 100%;
-            border: none;
-            background-color: #F4F5F6;
-            color: #999999;
-            padding-top: px2rem(12px);
+            }
+
+            .status {
+                color: #7B6C6F;
+                font-size: px2rem(16px);
+                font-weight: 600;
+                line-height: px2rem(16px);
+            }
+
+            .time {
+                font-size: px2rem(14px);
+                line-height: px2rem(14px);
+                color: #666666;
+                margin-top: px2rem(13px);
+            }
+
         }
-
-        .edit-input-child::-webkit-input-placeholder {
-            font-size: px2rem(12px);
-        }
-
-        .jiejian {
-            height: px2rem(124px);
-        }
     }
 
-
-}
-
-.am-modal-transparent {
-    width: px2rem(261px);
-}
-
-.edit-model {
-
-    img {
-        width: px2rem(204px);
-        height: px2rem(165px);
-        margin: px2rem(12px) auto px2rem(28px);
-        display: block;
-    }
-
-    span {
-        font-size: px2rem(17px);
-        color: #333;
-        font-family: PingFangSC-Regular;
-        font-weight: 400;
-        line-height: px2rem(18px);
-    }
-
-
-    .am-modal-footer {
-        margin-bottom: px2rem(21px);
-    }
-
-    .am-modal-button {
-        &::before {
-            opacity: 0;
-        }
-        width:105px;
-        height:40px;
-        background:rgba(92, 218, 168, 1);
-        // box-shadow:0px 0px 0px 0px rgba(92, 218, 168, 0.32);
-        box-shadow: 0px 5px 20px 0 rgba(92, 218, 168, .32);
-        border-radius:20px;
-        margin: auto;
-        font-size:16px;
-        font-family:PingFangSC-Regular;
-        font-weight:400;
-        color:rgba(255, 255, 255, 1);
-        line-height:40px;
-    }
 }

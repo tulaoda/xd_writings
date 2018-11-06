@@ -18,6 +18,14 @@ export default class Routes extends React.Component<any, any> {
       component: containers.Submission
     },
     {
+      path: "/my",
+      component: containers.My
+    },
+    {
+      path: "/mydetail/:id",
+      component: containers.MyDetails
+    },
+    {
       path: "*",
       component: containers.Hall
     }

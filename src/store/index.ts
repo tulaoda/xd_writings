@@ -2,7 +2,7 @@ import { configure } from "mobx";
 import hall from "./hall";
 import detail from "./detail";
 // configure({ enforceActions: false });
-// configure({ enforceActions: true });
+configure({ enforceActions: true });
 
 class store {
   constructor() {

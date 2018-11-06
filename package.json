@@ -31,7 +31,7 @@
     "mobx": "^5.5.2",
     "mobx-react": "^5.3.6",
     "moment": "^2.22.2",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.10.0",
     "open-browser-webpack-plugin": "0.0.5",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",

@@ -3,13 +3,10 @@ const common = require('./webpack.common.js')
 
 const webpack = require('webpack')
 const config = merge(common, {
-  devtool: 'inline-source-map',
-  mode: 'development',
+  devtool: "inline-source-map",
+
   devServer: {
     // contentBase: path.join(__dirname, 'dist'),
-    watchOptions: {
-      poll: true
-    },
     // contentBase: './src',
     inline: true,
     host: 'localhost',
@@ -19,11 +16,14 @@ const config = merge(common, {
     port: 9000,
     hot: true, // 只对组件进行修改，不刷新全部页面
     historyApiFallback: true
-
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production'),
+      },
+    }),
+    new webpack.HotModuleReplacementPlugin(), //热替换
   ]
 
 })

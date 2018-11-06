@@ -58,45 +58,45 @@ const config = {
   },
   module: {
     rules: [{
-      test: /\.(tsx|ts|js|jsx)$/,
-      loader: 'awesome-typescript-loader',
-      options: {
-        // 按需加载 ts 文件
-        getCustomTransformers: () => ({
-          before: [tsImportPluginFactory({
-            libraryName: 'antd-mobile',
-            style: false
-          })]
-        })
-      },
-      exclude: /node_modules/
-    }, {
-      test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
-      use: [
-        'url-loader?limit=100000&name=[path][name].[ext]',
-        'image-webpack-loader'
-      ]
-    },
-    {
-      test: /\.css$/,
-      use: [
-        MiniCssExtractPlugin.loader, 'css-loader'
-      ]
-    },
-    {
-      test: /\.scss$/,
-      use: [{
-        loader: MiniCssExtractPlugin.loader
+        test: /\.(tsx|ts|js|jsx)$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          // 按需加载 ts 文件
+          getCustomTransformers: () => ({
+            before: [tsImportPluginFactory({
+              libraryName: 'antd-mobile',
+              style: false
+            })]
+          })
+        },
+        exclude: /node_modules/
+      }, {
+        test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+        use: [
+          'url-loader?limit=100000&name=[path][name].[ext]',
+          // 'image-webpack-loader'
+        ]
       },
       {
-        loader: 'css-loader'
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader, 'css-loader'
+        ]
       },
+      {
+        test: /\.scss$/,
+        use: [{
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          },
 
-      {
-        loader: 'sass-loader'
+          {
+            loader: 'sass-loader'
+          }
+        ]
       }
-      ]
-    }
       // {
       //   test: /\.(png|jpg|gif|svg)$/i,
       //   use: [
@@ -135,9 +135,9 @@ const config = {
     () </script>`
     }),
     new CleanWebpackPlugin(['dist']), // 清理打包后的文件
-    new OpenBrowserPlugin({
-      url: 'http://localhost:9000'
-    })
+    // new OpenBrowserPlugin({
+    //   url: 'http://localhost:9000'
+    // })
 
   ]
   // 加载器配置

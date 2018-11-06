@@ -11,28 +11,32 @@
     display: block;
     box-shadow: 0 0 25px 0 hsla(0, 0%, 71%, .24);
     padding: px2rem(25px) px2rem(25px) px2rem(16px) px2rem(25px);
+    position: relative;
 
-
-    .article-title2 {
+    .article-title {
         font-size: px2rem(14px);
         padding-bottom: px2rem(16px);
         color: #333;
         font-weight: 600;
         line-height: px2rem(22px);
-        
+        width: px2rem(206px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .article-msg {
         margin-bottom: px2rem(16px);
     }
 
-    .article-type {
+    .article-type1 {
         width: px2rem(39px);
-        height: px2rem(20px);
+        // height: px2rem(20px);
+        // padding-top: px2rem(8px);
         // line-height: px2rem(20px);
-        border: 1px solid #5CDAA8;
+        border: 1px solid #666666;
         font-size: px2rem(12px);
-        color: #5CDAA8;
+        color: #666666;
         border-radius: px2rem(10px);
         float: left;
         margin-right: px2rem(12px);
@@ -47,10 +51,25 @@
         font-size: px2rem(12px);
         line-height: px2rem(20px);
 
+        img {
+            width: px2rem(12px);
+            height: px2rem(12px);
+            position: relative;
+            top: px2rem(1px);
+            margin: 0 px2rem(8px) 0 px2rem(22px);
+        }
     }
 
     img {
         width: px2rem(50px);
         height: px2rem(50px);
     }
+
+    .artice-state {
+        position: absolute;
+        top: px2rem(36px);
+        right: px2rem(26px);
+        font-size: px2rem(16px);
+    }
+
 }
