@@ -2,3 +2,11 @@
     $rem: 37.5px;
     @return ($px / $rem)+rem;
 }
+
+.visible {
+    display: none;
+}
+
+.bottom {
+    text-align: center;
+}

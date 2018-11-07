@@ -5,9 +5,9 @@ import imgXN from "../../assets/img/工资-2.png";
 import Store from "../../store";
 import { inject, observer } from "mobx-react";
 import "./style.scss";
-import { Help } from "../../../utils/Help";
 import { Link } from "react-router-dom";
 import { Steps, WingBlank, WhiteSpace } from 'antd-mobile';
+import { Help } from "../../../utils/Help";
 
 const Step = Steps.Step;
 @inject("Detail")
@@ -59,16 +59,16 @@ class Footer extends React.Component<any, any>{
     return (
       <div className="footer">
         <ul className="footer-judge">
-          <li>
-            <span></span>
-            <div className="status">待评判</div>
-            <div className="time">2018-08-01 10:00</div>
-          </li>
-          <li>
-            <span></span>
-            <div className="status">待评判</div>
-            <div className="time">2018-08-01 10:00</div>
-          </li>
+          {
+            myDetail.applyStatus && myDetail.applyStatus.map((e, i) => {
+              const type: any = e.stausEnum != null ? this.type[e.stausEnum] : { class: "" };
+              return <li>
+                <span className={type.class}></span>
+                <div className="status">{e.staus}</div>
+                <div className="time"> {Help.DateFormat(e.optionDate, "yyyy/MM/dd hh:ss")}</div>
+              </li>
+            })
+          }
         </ul>
       </div>
     )
