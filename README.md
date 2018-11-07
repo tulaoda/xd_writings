@@ -63,3 +63,6 @@
 
 ui库：antd-mobile   
     服务于企业级产品的设计体系，基于确定和自然的设计价值观上的模块化解决方案，让设计者和开发者专注于更好的用户体验。基于 Ant Design 设计语言，提供了一套开箱即用的高质量 React 组件，用于开发和服务于企业级中后台产品，除官方的 React 实现，还有 Angular、Vue 的实现
+
+运行结果：
+ ![image](https://github.com/tulaoda/xd_writings/blob/master/source/39EA9358CC2D9E05B35C89EFEB2A2EDF.png)
