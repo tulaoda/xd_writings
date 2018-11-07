@@ -16,8 +16,6 @@
 
 ## 目录结构
 ``` bash
-    |-- app                                           应用
-    |   |-- KCB                                       课程表
     |   |   |-- src                                   源码
     |   |   |   |-- assets                            资源目录
     |   |   |   |-- components                        展示组件
@@ -26,29 +24,10 @@
     |   |   |   |-- index.html                        html模板
     |   |   |   |-- index.tsx                         入口文件
     |   |   |   |-- routers.tsx                       路由
-    |   |   |-- deploy-debug.sh                       发布脚本 正式 debug (vconsole)
-    |   |   |-- deploy.sh                             发布脚本 正式 
-    |   |   |-- dev-debug.sh                          发布脚本 测试 debug (vconsole)
-    |   |   |-- dev.sh                                发布脚本 测试
     |   |   |-- package.json                          命令配置 
     |   |   |-- README.md                              
     |   |   |-- tsconfig.json                         ts配置                              
     |   |   |-- webpack.config.js                     webpack 端口 代理
-        。。。。。。
-    |-- build                                         编译代码 对应 app 结构
-    |   |--                                
-
-    |-- components                                    公共组件
-
-    |-- config                                        webpack 全局配置
-
-    |-- model                                         公共模型
-    |   |-- native                                    native 交互
-    |   |-- public                                    公共类
-    |   |-- stores                                    公共状态 （User）
-    |   |-- typings                                   d.ts 
-    |   |-- utils                                     工具  （封装的 http ，日期处理 等）
-
     |-- test                                          测试代码
     
     |-- package.json                                  项目依赖模块在这个位置 所app通用
