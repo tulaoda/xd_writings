@@ -9,7 +9,7 @@ const config = merge(common, {
     // contentBase: path.join(__dirname, 'dist'),
     // contentBase: './src',
     inline: true,
-    host: 'localhost',
+    host: '0.0.0.0',
     overlay: {
       error: true // 在页面显示错误
     },
