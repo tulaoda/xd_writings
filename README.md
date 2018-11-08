@@ -14,6 +14,8 @@
 3. npm run dev 开发环境打包
 4. npm run build  生产环境打包
 
+
+预览地址：http://www.tulaoda.top/web/tougao/
 ## 目录结构
 ``` bash
     |   |   |-- src                                   源码
@@ -71,3 +73,5 @@ ui库：antd-mobile
  ![image](https://github.com/tulaoda/xd_writings/blob/master/source/C7BCB991D57697C68B0ECB24E5266A00.png)
  ![image](https://github.com/tulaoda/xd_writings/blob/master/source/D95C8133568664CC768E9F244C9EF8BF.png)
  ![image](https://github.com/tulaoda/xd_writings/blob/master/source/39EA9358CC2D9E05B35C89EFEB2A2EDF.png)
+
+ 暂未解决的问题：

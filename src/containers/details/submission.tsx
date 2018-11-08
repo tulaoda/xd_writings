@@ -20,7 +20,7 @@ export class Submission extends React.Component<any, any> {
   }
 
   onClose() {
-    this.props.history.replace("/hall")
+    this.props.history.replace("/")
     this.setState({ visible: false })
   }
   onSubmit(e) {
