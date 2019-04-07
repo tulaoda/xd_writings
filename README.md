@@ -3,11 +3,6 @@
 #### 项目介绍
 校点投稿前端react+typeScript构建
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
 
 1. npm i 
 2. npm run start   启动 webpack-dev-server
